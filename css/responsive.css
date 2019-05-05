@@ -1,0 +1,17 @@
+@media screen and (min-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .column {
+    width: 50%;
+    margin: auto;
+  }
+
+  .row {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

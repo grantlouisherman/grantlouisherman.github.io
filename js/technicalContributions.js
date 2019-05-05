@@ -1,45 +1,52 @@
 
-const contributions = [
-  {
+const contributions = [{
     "key": "Open Source",
-    "projects": [
-      {
+    "projects": [{
         "src": "js-ipfs",
         "type": "link",
         "link": "https://github.com/grantlouisherman/js-ipfs/commit/4ad104d85d813c2016f4abcafb46dfb5f0bba23b"
       },
       {
-          "src": "script-8",
-          "type": "link",
-          "link": "https://github.com/script-8/script-8.github.io/pull/163"
-        },
-        {
-          "src": "script-8",
-          "type": "link",
-          "link": "https://github.com/script-8/script-8.github.io/pull/197/commits"
-        }
-      ]
-    },
+        "src": "script-8",
+        "type": "link",
+        "link": "https://github.com/script-8/script-8.github.io/pull/163"
+      },
+      {
+        "src": "script-8",
+        "type": "link",
+        "link": "https://github.com/script-8/script-8.github.io/pull/197/commits"
+      }
+    ]
+  },
   {
     "key": "Full Stack Academy",
     "projects": [{
-      "src": "Final Project",
-      "type": "video",
-      "link": "https://www.youtube.com/watch?v=cumCXcnWs_g"
-    },
-    {
-      "src": "Tech Talk",
-      "type": "video",
-      "link": "https://youtu.be/I9eW9JkJiJk"
-    }
-
-  ]
+        "src": "Final Project",
+        "type": "video",
+        "link": "https://www.youtube.com/watch?v=cumCXcnWs_g"
+      },
+      {
+        "src": "Tech Talk",
+        "type": "video",
+        "link": "https://youtu.be/I9eW9JkJiJk"
+      },
+      {
+        "src": "Hackathon",
+        "type": "video",
+        "link": "https://www.youtube.com/watch?v=xvFsOmzMDXQ&feature=youtu.be"
+      }
+    ]
   }
 ]
 
 const technicalContributionPanel = project => {
-  const { src, type, link } = project
+  const {
+    src,
+    type,
+    link
+  } = project
   const container = document.createElement('div')
+  container.setAttribute('class', 'panel')
   const label = document.createElement('label')
   label.innerText = src
   const projectLink = document.createElement('a')
@@ -67,7 +74,10 @@ const technicalContributionComponent = (key, projects) => {
 const technicalContributionComponentCreator = () => {
   const rootNode = document.getElementById('technicalContributions')
   contributions.forEach(contribution => {
-    const { key, projects } = contribution
+    const {
+      key,
+      projects
+    } = contribution
     rootNode.append(technicalContributionComponent(key, projects))
   })
   return rootNode

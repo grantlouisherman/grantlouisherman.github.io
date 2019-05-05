@@ -15,9 +15,3 @@
 .text {
   font-family: "Georgia", serif
 }
-
-@media screen and (max-width: 500px) {
-  .column {
-    width: 100%;
-  }
-}
