@@ -26,7 +26,14 @@ const contributions = [
       "src": "Final Project",
       "type": "video",
       "link": "https://www.youtube.com/watch?v=cumCXcnWs_g"
-    }]
+    },
+    {
+      "src": "Tech Talk",
+      "type": "video",
+      "link": "https://youtu.be/I9eW9JkJiJk"
+    }
+
+  ]
   }
 ]
 
