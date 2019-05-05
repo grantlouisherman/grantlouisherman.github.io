@@ -1,17 +1,19 @@
-
 * {
   box-sizing: border-box;
 }
 
 .row {
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
 }
 
 .column {
   flex: 'flex-grow';
   padding: 5px;
+}
 
+.text {
+  font-family: "Georgia", serif
 }
 
 @media screen and (max-width: 500px) {

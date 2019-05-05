@@ -1,13 +1,12 @@
 
-const personelLinksLayout = [
-  {
+const personelLinksLayout = [{
     "key": "github",
-    "link":"https://github.com/grantlouisherman",
-    "icon":"./images/github.png"
+    "link": "https://github.com/grantlouisherman",
+    "icon": "./images/github.png"
   },
   {
     "key": "linkedin",
-    "link":"https://www.linkedin.com/in/grant-herman-3b34258a/",
+    "link": "https://www.linkedin.com/in/grant-herman-3b34258a/",
     "icon": "./images/linkedin.png"
   },
   {
@@ -17,9 +16,9 @@ const personelLinksLayout = [
   },
   {
     "key": "resume",
-    "link":"./additionalContent/resume.pdf",
+    "link": "./additionalContent/resume.pdf",
     "icon": "./images/resume.png",
-    "download":true
+    "download": true
   }
 ]
 
@@ -27,10 +26,14 @@ const personalLinkComponent = (key, link, icon, download) => {
   const container = document.createElement('div')
   container.setAttribute('class', 'column')
   const linkIcon = new Image()
+  if (download) {
+    linkIcon.download = link;
+  }
   linkIcon.src = icon
   linkIcon.class = 'linkIcon'
   const externalLink = document.createElement('a')
   externalLink.setAttribute('href', link)
+  externalLink.setAttribute('target', '_blank')
   externalLink.append(linkIcon)
   container.append(externalLink)
   return container
@@ -39,7 +42,11 @@ const personalLinkComponent = (key, link, icon, download) => {
 const personalLinkComponentCreator = () => {
   const personelLinksContainer = document.getElementById('personelLinksContainer')
   personelLinksLayout.forEach(links => {
-    const { key, link, icon } = links
+    const {
+      key,
+      link,
+      icon
+    } = links
     personelLinksContainer.append(personalLinkComponent(key, link, icon, links.download))
   })
   return personelLinksContainer
