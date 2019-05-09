@@ -19,14 +19,14 @@ const contributions = [{
     ]
   },
   {
-    "key": "Full Stack Academy",
+    "key": "Tech Talks",
     "projects": [{
         "src": "Final Project",
         "type": "video",
         "link": "https://www.youtube.com/watch?v=cumCXcnWs_g"
       },
       {
-        "src": "Tech Talk",
+        "src": "Web Assembly Talk",
         "type": "video",
         "link": "https://youtu.be/I9eW9JkJiJk"
       },
@@ -34,6 +34,25 @@ const contributions = [{
         "src": "Hackathon",
         "type": "video",
         "link": "https://www.youtube.com/watch?v=xvFsOmzMDXQ&feature=youtu.be"
+      }
+    ]
+  },
+  {
+    "key": "Notable Github Projects",
+    "projects": [{
+        "src": "Full Stack: Final Project",
+        "type": "link",
+        "link": "https://github.com/grantlouisherman/AmReady_XCode"
+      },
+      {
+        "src": "gofundme Clone with Ethereum",
+        "type": "link",
+        "link": "https://github.com/grantlouisherman/Emergent-Fund-Me-With-Truffle"
+      },
+      {
+        "src": "S3 bucket Continuous Integration",
+        "type": "link",
+        "link": "https://github.com/grantlouisherman/aws-continuous-integration"
       }
     ]
   }
@@ -45,14 +64,25 @@ const technicalContributionPanel = project => {
     type,
     link
   } = project
+  // overall container
   const container = document.createElement('div')
+  // setting panel class
   container.setAttribute('class', 'panel')
+  // creating label and setting text
   const label = document.createElement('label')
   label.innerText = src
+  // adding link, setting target
   const projectLink = document.createElement('a')
   projectLink.setAttribute('href', link)
   projectLink.setAttribute('target', '_blank')
+  // adding icon for type
+  const typeIconContainer = new Image()
+  typeIconContainer.src = `./images/${type}.png`
+  typeIconContainer.height = 50
+  typeIconContainer.width = 50
+  //appending everything to parent nodes
   projectLink.append(label)
+  container.append(typeIconContainer)
   container.append(projectLink)
   return container
 }

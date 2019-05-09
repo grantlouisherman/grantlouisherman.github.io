@@ -30,7 +30,7 @@ const personalLinkComponent = (key, link, icon, download) => {
     linkIcon.download = link;
   }
   linkIcon.src = icon
-  linkIcon.class = 'linkIcon'
+  linkIcon.setAttribute('class','linkIcon')
   const externalLink = document.createElement('a')
   externalLink.setAttribute('href', link)
   externalLink.setAttribute('target', '_blank')

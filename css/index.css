@@ -2,9 +2,22 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 100px;
+}
 .row {
   display: flex;
   justify-content: space-evenly;
+}
+
+.vertical {
+    flex-direction: column;
+    margin: 100px;
+}
+
+.linkIcon {
+  width: 100px;
+  height: 100px;
 }
 
 .column {
@@ -12,6 +25,35 @@
   padding: 5px;
 }
 
+.column h3 {
+  text-align: center;
+  font-family: "Arial Black", serif;
+  padding: 10px;
+}
+
 .text {
-  font-family: "Georgia", serif
+  font-family: "Arial Black", serif;
+  padding: 10px;
+}
+
+.panel {
+  padding: 30px;
+  border-style: solid;
+  margin: 20px;
+  border-width: small;
+  word-wrap: break-word;
+  max-width: 150px;
+  max-height: 150px;
+  box-shadow: 5px 10px #888888;
+}
+
+.panel label {
+  text-align: center;
+  font-family: "Georgia", serif;
+}
+
+.panel img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

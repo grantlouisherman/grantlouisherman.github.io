@@ -1,3 +1,4 @@
+
 @media screen and (max-width: 400px) {
   .column {
     width: 50%;
@@ -7,5 +8,9 @@
   .row {
     flex-direction: column;
     justify-content: center;
+  }
+  label {
+    font-family: "Georgia", serif;
+    font-size: 10px;
   }
 }
