@@ -1,16 +1,32 @@
 
 @media screen and (max-width: 400px) {
   .column {
-    width: 50%;
+    width: 100%;
     margin: auto;
+    flex: initial;
+    padding: initial;
   }
 
   .row {
     flex-direction: column;
-    justify-content: center;
+    
   }
-  label {
-    font-family: "Georgia", serif;
-    font-size: 10px;
+
+  .vertical {
+    width: 100%;
   }
+  .panel  {
+    width: 100%;
+  }
+
+  .text {
+    font-family: initial;
+    padding: initial;
+  }
+
+  .panel label {
+    display: none
+  }
+
+
 }

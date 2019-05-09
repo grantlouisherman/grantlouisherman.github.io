@@ -22,8 +22,15 @@ const personelLinksLayout = [{
   }
 ]
 
+const createToolTip = name => {
+  const toolTipContainer = document.createElement('span')
+  toolTipContainer.setAttribute('class', 'tooltiptext')
+  toolTipContainer.innerText = name
+  return toolTipContainer
+}
 const personalLinkComponent = (key, link, icon, download) => {
   const container = document.createElement('div')
+  container.setAttribute('id', key)
   container.setAttribute('class', 'column')
   const linkIcon = new Image()
   if (download) {
@@ -32,9 +39,11 @@ const personalLinkComponent = (key, link, icon, download) => {
   linkIcon.src = icon
   linkIcon.setAttribute('class','linkIcon')
   const externalLink = document.createElement('a')
+  externalLink.setAttribute('class', 'tooltip')
   externalLink.setAttribute('href', link)
   externalLink.setAttribute('target', '_blank')
   externalLink.append(linkIcon)
+  externalLink.append(createToolTip(key))
   container.append(externalLink)
   return container
 }
