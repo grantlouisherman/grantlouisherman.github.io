@@ -1,5 +1,8 @@
 
 @media screen and (max-width: 400px) {
+  section {
+    height:initial;
+  }
   .column {
     width: 100%;
     margin: auto;
@@ -9,11 +12,11 @@
 
   .row {
     flex-direction: column;
-    
   }
 
   .vertical {
     width: 100%;
+    margin: initial;
   }
   .panel  {
     width: 100%;
@@ -22,6 +25,7 @@
   .text {
     font-family: initial;
     padding: initial;
+    font-size: 10px;
   }
 
   .panel label {

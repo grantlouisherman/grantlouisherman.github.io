@@ -6,17 +6,21 @@
   <title>Grant Herman Personal Webite</title>
   <link rel="manifest" href="/manifest.json">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
+    new WOW().init()
+  </script>
 </head>
-
 <body>
-  <header class="row">
-    <h1 class="column">PLACEHOLDER</h1>
-  </header>
+  <section id="top" class="row">
+    <h3> Grant Herman Personel Website</h3>
+  </section>
   <hr>
   <section class="row">
-  <div id="personelLinksContainer" class="vertical">
+  <div id="personelLinksContainer" class="vertical wow bounceInUp">
   </div>
-  <div class="column vertical">
+  <div class="column vertical wow bounceInUp">
     <h3>Quick Bio</h3>
     <p class="text">
       Entry - Mid level software developer and former technical management consultant with
@@ -29,7 +33,7 @@
 </div>
 </section>
   <hr>
-  <section id="technicalContributions" class="row">
+  <section id="technicalContributions" class="row wow bounceInUp">
   </section>
   <hr>
   <section id="articles" class="row">
@@ -39,7 +43,9 @@
 </script>
 <script src="./js/technicalContributions.js">
 </script>
-<link rel="stylesheet" href="./css/index.css">
+<link rel="stylesheet" href="./css/sections.css">
+<link rel="stylesheet" href="./css/panel.css">
+<link rel="stylesheet" href="./css/tag.css">
+<link rel="stylesheet" href="./css/tooltip.css">
 <link rel="stylesheet" href="./css/responsive.css">
-
 </html>

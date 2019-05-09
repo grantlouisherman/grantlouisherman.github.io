@@ -1,0 +1,22 @@
+.panel {
+  padding: 30px;
+  border-style: solid;
+  margin: 20px;
+  border-width: small;
+  word-wrap: break-word;
+  max-width: 150px;
+  max-height: 150px;
+  box-shadow: 5px 10px #888888;
+}
+
+.panel label {
+  text-align: center;
+  font-family: "Georgia", serif;
+}
+
+
+.panel img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

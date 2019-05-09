@@ -1,6 +1,6 @@
 
 const contributions = [{
-    "key": "Open Source",
+    "key": "Open Source PRs",
     "projects": [{
         "src": "js-ipfs",
         "type": "link",

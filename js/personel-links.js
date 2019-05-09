@@ -28,8 +28,9 @@ const createToolTip = name => {
   toolTipContainer.innerText = name
   return toolTipContainer
 }
+
 const personalLinkComponent = (key, link, icon, download) => {
-  const container = document.createElement('div')
+  let container = document.createElement('div')
   container.setAttribute('id', key)
   container.setAttribute('class', 'column')
   const linkIcon = new Image()
