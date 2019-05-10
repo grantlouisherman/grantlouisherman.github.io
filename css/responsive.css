@@ -8,6 +8,7 @@
     margin: auto;
     flex: initial;
     padding: initial;
+    overflow:hidden;
   }
 
   .row {
@@ -31,6 +32,36 @@
   .panel label {
     display: none
   }
+}
 
+@media screen and (max-width: 950px) {
+  section {
+    height:initial;
+  }
+  .column {
+    width: 100%;
+    margin: auto;
+    flex: initial;
+    padding: initial;
+  }
+
+  .row {
+    flex-direction: column;
+    flex-shrink: 1;
+  }
+
+  .vertical {
+    width: 100%;
+    margin: initial;
+  }
+  .panel  {
+    width: 100%;
+  }
+
+  .text {
+    font-family: initial;
+    padding: initial;
+    font-size: 20px;
+  }
 
 }
