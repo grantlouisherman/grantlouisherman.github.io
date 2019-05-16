@@ -110,7 +110,5 @@ const createbiographyChildComponent = () => {
 }
 
 const createSectionChildrenComponents = () => {
-  
-}
 
-createSectionChildrenComponents()
+}
