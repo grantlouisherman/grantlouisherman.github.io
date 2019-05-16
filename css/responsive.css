@@ -3,16 +3,9 @@
   section {
     height:initial;
   }
-  .column {
-    width: 100%;
-    margin: auto;
-    flex: initial;
-    padding: initial;
-    overflow:hidden;
-  }
 
   .row {
-    flex-direction: column;
+    flex-shrink: 0;
   }
 
   .vertical {
@@ -38,15 +31,8 @@
   section {
     height:initial;
   }
-  .column {
-    width: 100%;
-    margin: auto;
-    flex: initial;
-    padding: initial;
-  }
 
   .row {
-    flex-direction: column;
     flex-shrink: 1;
   }
 

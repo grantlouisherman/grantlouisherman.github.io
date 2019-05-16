@@ -29,23 +29,32 @@ const createToolTip = name => {
   return toolTipContainer
 }
 
-const personalLinkComponent = (key, link, icon, download) => {
-  let container = document.createElement('div')
-  container.setAttribute('id', key)
-  container.setAttribute('class', 'column')
-  const linkIcon = new Image()
-  if (download) {
-    linkIcon.download = link;
-  }
-  linkIcon.src = icon
-  linkIcon.setAttribute('class','linkIcon')
+const createExternalLink = (link, linkIcon, key) => {
   const externalLink = document.createElement('a')
   externalLink.setAttribute('class', 'tooltip')
   externalLink.setAttribute('href', link)
   externalLink.setAttribute('target', '_blank')
   externalLink.append(linkIcon)
   externalLink.append(createToolTip(key))
-  container.append(externalLink)
+  return externalLink
+}
+
+const createImage = (download, icon, link) => {
+  const linkIcon = new Image()
+  if (download) {
+    linkIcon.download = link;
+  }
+  linkIcon.src = icon
+  linkIcon.setAttribute('class','linkIcon')
+  return linkIcon
+}
+
+const personalLinkComponent = (key, link, icon, download) => {
+  let container = document.createElement('div')
+  container.setAttribute('id', key)
+  const iconImage = createImage(download, icon, link)
+  const externalLinkContainer = createExternalLink(link, iconImage, key)
+  container.append(externalLinkContainer)
   return container
 }
 
