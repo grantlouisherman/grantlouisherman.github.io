@@ -5,3 +5,19 @@
 body {
   margin: 100px;
 }
+
+#ExitBar {
+  background-color: #000080;
+  border-radius: 25px;
+  padding: 50px;
+  text-align: center;
+  font-family: "Arial Black", serif;
+  color:white;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#SubSection {
+  height: 100%;
+  overflow: scroll;
+}

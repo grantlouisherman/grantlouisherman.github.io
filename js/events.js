@@ -5,7 +5,4 @@ window.onbeforeunload = () => {
 
 window.onload = () => {
   document.body.style.visibility = 'visible'
-  // document.getElementById('TechTalk').addEventListener('click', (event) => {
-  //   document.getElementById('SubSection-TechTalk').style.visibility = 'visible'
-  // })
 }

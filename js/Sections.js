@@ -23,17 +23,17 @@ const contributions = [{
     "projects": [{
         "src": "Final Project",
         "type": "video",
-        "link": "https://www.youtube.com/watch?v=cumCXcnWs_g"
+        "link": "https://www.youtube.com/embed/cumCXcnWs_g"
       },
       {
         "src": "Web Assembly Talk",
         "type": "video",
-        "link": "https://youtu.be/I9eW9JkJiJk"
+        "link": "https://www.youtube.com/embed/I9eW9JkJiJk"
       },
       {
         "src": "Hackathon",
         "type": "video",
-        "link": "https://www.youtube.com/watch?v=xvFsOmzMDXQ&feature=youtu.be"
+        "link": "https://www.youtube.com/embed/xvFsOmzMDXQ"
       }
     ]
   }, {
@@ -54,67 +54,3 @@ const settingMultipleAttributes = (elem, attributes) => {
     elem.setAttribute(attriKey, attributes[attriKey])
   })
 }
-const createCarouselContainer = () => {
-  const outerCarouselcontainer = document.createElement('div')
-  settingMultipleAttributes(outerCarouselcontainer, {
-    'class': 'carousel',
-    'class': 'slide',
-    'data-ride': 'carousel'
-  })
-  const innerCarouselContainer = document.createElement('div')
-  innerCarouselContainer.setAttribute('class', 'carousel-inner')
-  outerCarouselcontainer.append(innerCarouselContainer)
-  return outerCarouselcontainer
-}
-
-const createCarouselItem = (content) => {
-  const itemContainer = document.createElement('div')
-  itemContainer.setAttribute('class', 'carousel-item')
-  const contentContainer = document.createElement('div')
-  settingMultipleAttributes(itemContainer, {
-    'class': 'd-block',
-    'class': 'w-100'
-  })
-  contentContainer.innerText = content
-  itemContainer.append(contentContainer)
-  return contentContainer
-}
-
-const createCarouselButton = buttonText => {
-  const buttonContainer = document.createElement('a')
-  const createIcon = document.createElement('span')
-  const createText = document.createElement('span')
-  settingMultipleAttributes(createIcon, {
-    'class': 'carousel-control-prev-icon',
-    'aria-hidden': true
-  })
-  createText.innerText = buttonText
-  createText.setAttribute('class', 'sr-only')
-  buttonContainer.append(createIcon)
-  buttonContainer.append(createText)
-  return buttonContainer
-}
-
-const createTechTalkChildComponent = projects => {
-  const carouselContainer = createCarouselContainer()
-  projects.forEach(project => {
-    carouselContainer.append(createCarouselItem(project.src))
-  })
-  carouselContainer.append(createCarouselButton('Previous'))
-  carouselContainer.append(createCarouselButton('Next'))
-  document.getElementById('SubSection-TechTalk').append(carouselContainer)
-}
-
-
-const createOpenSourceChildComponent = () => {
-
-}
-
-const createbiographyChildComponent = () => {
-
-}
-
-const createSectionChildrenComponents = () => {
-
-}
-// createTechTalkChildComponent(contributions[1].projects)

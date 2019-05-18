@@ -6,9 +6,10 @@
   <title>Grant Herman Personal Webite</title>
   <link rel="manifest" href="/manifest.json">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.4.2/css/amazeui.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="http://cdn.amazeui.org/amazeui/2.4.2/js/amazeui.js"></script>
+
   <script src="./js/events.js">
   </script>
 </head>
@@ -17,20 +18,63 @@
   <section class="row" id="personelLinksContainer">
   </section>
   <hr>
-  <section class="row">
-    <h1>
-      About
-    </h1>
-    <h1 id="TechTalk">
-      Tech Talks
-    </h1>
-    <h1>
+  <section id="ParentSection" class="row">
+    <div>
+      <h1 data-am-modal="{target: '#About', closeViaDimmer: 0}">
+        About
+      </h1>
+      <div class="am-modal am-modal-no-btn" tabindex="-1" id="About">
+        <div class="am-modal-dialog">
+          <div class="am-modal-hd">About Me
+            <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+          </div>
+          <div id="About-Text" class="am-modal-bd">
+            Entry - Mid level software developer and former technical management consultant with
+            strong financial services and government contracting background.
+            Experienced in JavaScript, Node.js, React, React-Redux, and GraphQl.
+            Professional with a Bachelor's degree focused in Political Science and Government from Fordham University.<br>
+            <br>
+            I currently work at American Express on the Benefits Dashboard team as a software developer.
+          </div>
+        </div>
+      </div>
+    <div>
+    <div>
+      <h1 data-am-modal="{target: '#Tech-Talks', closeViaDimmer: 0}">
+        Tech Talks
+      </h1>
+      <div class="am-modal am-modal-no-btn" tabindex="-1" id="Tech-Talks">
+        <div class="am-modal-dialog">
+          <div class="am-modal-hd">Tech Talks
+            <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+          </div>
+          <div id="Tech-Talks-Text" class="am-modal-bd">
+            <iframe src="https://www.youtube.com/embed/cumCXcnWs_g"></iframe>
+            <iframe src="https://www.youtube.com/embed/I9eW9JkJiJk"></iframe>
+            <iframe src="https://www.youtube.com/embed/xvFsOmzMDXQ"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+    <h1 id="OpenSource" data-am-modal="{target: '#Open-Source', closeViaDimmer: 0}">
       Open Source
     </h1>
-  </section>
-    <hr>
-    <div id="SubSection-TechTalk" style="visibility: hidden;">
+    <div class="am-modal am-modal-no-btn" tabindex="-1" id="Open-Source">
+      <div class="am-modal-dialog">
+        <div class="am-modal-hd">Open Source Contributions
+          <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+        </div>
+        <div id="OpenSource-Text" class="am-modal-bd">
+          <a href="https://github.com/grantlouisherman/js-ipfs/commit/4ad104d85d813c2016f4abcafb46dfb5f0bba23b">JS IPFS PR</a>
+          <a href="https://github.com/script-8/script-8.github.io/pull/163">SCRIPT-8</a>
+          <a href="https://github.com/script-8/script-8.github.io/pull/197/commits">SCRIPT-8</a>
+        </div>
+      </div>
     </div>
+  </div>
+  </section>
+  <hr>
 </body>
 <script src="./js/personel-links.js" async>
 </script>
