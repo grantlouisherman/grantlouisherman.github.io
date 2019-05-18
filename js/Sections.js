@@ -36,7 +36,7 @@ const contributions = [{
         "link": "https://www.youtube.com/watch?v=xvFsOmzMDXQ&feature=youtu.be"
       }
     ]
-  },{
+  }, {
     "key": "Biography",
     "content": `
             Entry - Mid level software developer and former technical management consultant with
@@ -75,7 +75,7 @@ const createCarouselItem = (content) => {
     'class': 'd-block',
     'class': 'w-100'
   })
-  contentContainer.innerText =content
+  contentContainer.innerText = content
   itemContainer.append(contentContainer)
   return contentContainer
 }
@@ -95,9 +95,14 @@ const createCarouselButton = buttonText => {
   return buttonContainer
 }
 
-const createTechTalkChildComponent = (project) => {
-
-
+const createTechTalkChildComponent = projects => {
+  const carouselContainer = createCarouselContainer()
+  projects.forEach(project => {
+    carouselContainer.append(createCarouselItem(project.src))
+  })
+  carouselContainer.append(createCarouselButton('Previous'))
+  carouselContainer.append(createCarouselButton('Next'))
+  document.getElementById('SubSection-TechTalk').append(carouselContainer)
 }
 
 
@@ -112,3 +117,4 @@ const createbiographyChildComponent = () => {
 const createSectionChildrenComponents = () => {
 
 }
+// createTechTalkChildComponent(contributions[1].projects)
