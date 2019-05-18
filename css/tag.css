@@ -6,18 +6,16 @@ body {
   margin: 100px;
 }
 
-#ExitBar {
-  background-color: #000080;
-  border-radius: 25px;
-  padding: 50px;
-  text-align: center;
-  font-family: "Arial Black", serif;
-  color:white;
-  margin-left: 20px;
-  margin-right: 20px;
+a {
+  cursor: pointer;
 }
 
-#SubSection {
-  height: 100%;
-  overflow: scroll;
+#ParentSection h1 {
+  cursor: pointer;
+}
+
+#ChildSection:hover {
+  border-style: solid;
+  border-color: black;
+  border-radius: 25px;
 }

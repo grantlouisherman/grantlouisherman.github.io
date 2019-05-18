@@ -9,7 +9,7 @@
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <link rel="stylesheet" href="./amaze-ui/amazeui.min.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="./amaze-ui/amazeui.js"></script>
+  <script src="./amaze-ui/amazeui.js" async></script>
 
   <script src="./js/events.js">
   </script>
@@ -21,7 +21,7 @@
   <hr>
   <section id="ParentSection" class="row">
     <div>
-      <h1 data-am-modal="{target: '#About', closeViaDimmer: 0}">
+      <h1 id="ChildSection" data-am-modal="{target: '#About', closeViaDimmer: 0}">
         About
       </h1>
       <div class="am-modal am-modal-no-btn" tabindex="-1" id="About">
@@ -41,7 +41,7 @@
       </div>
     <div>
     <div>
-      <h1 data-am-modal="{target: '#Tech-Talks', closeViaDimmer: 0}">
+      <h1 id="ChildSection" data-am-modal="{target: '#Tech-Talks', closeViaDimmer: 0}">
         Tech Talks
       </h1>
       <div class="am-modal am-modal-no-btn" tabindex="-1" id="Tech-Talks">
@@ -58,7 +58,7 @@
       </div>
     </div>
     <div>
-    <h1 id="OpenSource" data-am-modal="{target: '#Open-Source', closeViaDimmer: 0}">
+    <h1 id="ChildSection" data-am-modal="{target: '#Open-Source', closeViaDimmer: 0}">
       Open Source
     </h1>
     <div class="am-modal am-modal-no-btn" tabindex="-1" id="Open-Source">
