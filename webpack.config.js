@@ -4,14 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
-    './scripts/events.js',
-    './scripts/personel-links.js',
-    './scripts/Sections.js',
-    './scripts/amazeui.js',
-    "./css/sections.css",
-    "./css/tag.css",
-    "./css/tooltip.css",
-    "./css/responsive.css"
+    './minified/index.min.js',
+    './minified/index.min.css',
+    './scripts/amazeui.js'
   ],
   module: {
     rules: [{
@@ -43,12 +38,8 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      title: 'Caching'
-     })
   ],
   output: {
-    filename: "bundle.js",
-    filename: '[name].[contenthash].js',
+    filename: "bundle.js"
   },
 }
