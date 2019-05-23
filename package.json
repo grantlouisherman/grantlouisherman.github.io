@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx webpack"
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "compression-webpack-plugin": "^2.0.0",
+    "css-loader": "^2.1.1",
+    "script-loader": "^0.7.2",
+    "style-loader": "^0.23.1",
     "webpack": "^4.32.1",
     "webpack-cli": "^3.3.2"
   }
