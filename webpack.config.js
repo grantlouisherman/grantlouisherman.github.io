@@ -1,4 +1,6 @@
 const CompressionPlugin = require('compression-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -11,10 +13,6 @@ module.exports = {
     "./css/tooltip.css",
     "./css/responsive.css"
   ],
-  output: {
-    filename: "bundle.js",
-    chunkFilename: 'chunk.bundle.js',
-  },
   module: {
     rules: [{
         test: /\.js$/,
@@ -44,6 +42,13 @@ module.exports = {
     }
   },
   plugins: [
-    new CompressionPlugin()
-  ]
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'Caching'
+     })
+  ],
+  output: {
+    filename: "bundle.js",
+    filename: '[name].[contenthash].js',
+  },
 }
